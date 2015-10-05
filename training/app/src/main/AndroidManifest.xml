@@ -21,6 +21,10 @@
             android:name=".FragmentSample.statics.StaticFragmentTitle"
             android:label="@string/title_activity_static_fragment_title" >
         </activity>
+        <activity
+            android:name=".FragmentSample.dynamic.NewsActivity"
+            android:label="NewsActivity" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.ckelsel.android.training;
+ package com.ckelsel.android.training;
 
 /*
  * Copyright (C) 2012 The Android Open Source Project
