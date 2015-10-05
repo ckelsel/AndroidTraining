@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewConfiguration;
 
+import com.ckelsel.android.training.FragmentSample.statics.StaticFragmentTitle;
+
 import java.lang.reflect.Field;
 
 
@@ -58,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
                 //break;
             case R.id.action_search:
                 Log.i("", "action_search");
-                Intent intent = new Intent(this, ArticleActivity.class);
+                Intent intent = new Intent(this, StaticFragmentTitle.class);
                 startActivity(intent);
                 return true;
                 //break;
