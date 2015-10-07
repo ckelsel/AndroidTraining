@@ -16,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ArticleActivity" />
         <activity
             android:name=".FragmentSample.statics.StaticFragmentTitle"
             android:label="@string/title_activity_static_fragment_title" >
@@ -24,6 +23,10 @@
         <activity
             android:name=".FragmentSample.dynamic.NewsActivity"
             android:label="NewsActivity" >
+        </activity>
+        <activity
+            android:name=".AsyncTask.DownloadActivity"
+            android:label="@string/title_activity_download" >
         </activity>
     </application>
 

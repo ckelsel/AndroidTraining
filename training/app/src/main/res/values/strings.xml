@@ -11,4 +11,5 @@
     <string name="hello_blank_fragment_title">Hello blank fragment title</string>
     <string name="hello_blank_fragment_content">Hello blank fragment Content</string>
     <string name="title_activity_static_fragment_title">StaticFragmentTitle</string>
+    <string name="title_activity_download">DownloadActivity</string>
 </resources>

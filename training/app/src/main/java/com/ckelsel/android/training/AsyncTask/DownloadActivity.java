@@ -13,28 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ckelsel.android.training.FragmentSample.statics;
+package com.ckelsel.android.training.AsyncTask;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.ckelsel.android.training.R;
 
-public class StaticFragmentTitle extends ActionBarActivity {
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class DownloadActivity extends ActionBarActivity implements View.OnClickListener{
+    private static final String TAG = "DownloadActivity";
+    @Bind(R.id.progressbar)
+    ProgressBar mProgressBar;
+
+    @Bind(R.id.download)
+    Button mDownload;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_static_fragment_title);
-    }
+        setContentView(R.layout.activity_download);
 
+        ButterKnife.bind(this);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_static_fragment_title, menu);
+        getMenuInflater().inflate(R.menu.menu_download, menu);
         return true;
     }
 
@@ -51,5 +66,16 @@ public class StaticFragmentTitle extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @OnClick(R.id.download)
+    @Override
+    public void onClick(View view) {
+        Log.i(TAG, "onClick");
+        switch (view.getId()) {
+            case R.id.download:
+                new DownloadManager(mProgressBar).execute("abc");
+                break;
+        }
     }
 }

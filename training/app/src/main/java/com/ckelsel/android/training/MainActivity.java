@@ -24,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewConfiguration;
 
+import com.ckelsel.android.training.AsyncTask.DownloadActivity;
 import com.ckelsel.android.training.FragmentSample.dynamic.NewsActivity;
 import com.ckelsel.android.training.FragmentSample.statics.StaticFragmentTitle;
 import com.ckelsel.android.training.dummy.DummyContent;
@@ -121,7 +122,7 @@ public class MainActivity extends ActionBarActivity implements SampleListFragmen
                 startActivity(StaticFragmentTitle.class);
                 break;
             case "Async Task":
-                //startActivity();
+                startActivity(DownloadActivity.class);
                 break;
         }
     }

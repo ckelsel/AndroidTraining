@@ -38,7 +38,6 @@ public class SampleListFragment extends ListFragment {
 
     private OnFragmentInteractionListener mListener;
 
-    // TODO: Rename and change types of parameters
     public static SampleListFragment newInstance() {
         SampleListFragment fragment = new SampleListFragment();
         return fragment;
@@ -55,7 +54,6 @@ public class SampleListFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // TODO: Change Adapter to display your content
         setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
                 android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS));
     }
@@ -100,7 +98,6 @@ public class SampleListFragment extends ListFragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         public void onFragmentInteraction(String id);
     }
 
