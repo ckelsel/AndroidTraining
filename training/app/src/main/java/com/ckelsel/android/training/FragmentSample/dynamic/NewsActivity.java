@@ -34,6 +34,7 @@ public class NewsActivity extends FragmentActivity implements TitleFragment.OnTi
             article.setArguments(args);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.news, article);
+            ft.addToBackStack(null);
             ft.commit();
         }
     }
