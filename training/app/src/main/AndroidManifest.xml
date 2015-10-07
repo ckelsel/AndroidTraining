@@ -28,6 +28,10 @@
             android:name=".AsyncTask.DownloadActivity"
             android:label="@string/title_activity_download" >
         </activity>
+        <activity
+            android:name=".Navigation.navigation"
+            android:label="@string/title_activity_navigation" >
+        </activity>
     </application>
 
 </manifest>

@@ -24,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewConfiguration;
 
+import com.ckelsel.android.training.Navigation.navigation;
 import com.ckelsel.android.training.AsyncTask.DownloadActivity;
 import com.ckelsel.android.training.FragmentSample.dynamic.NewsActivity;
 import com.ckelsel.android.training.FragmentSample.statics.StaticFragmentTitle;
@@ -123,6 +124,9 @@ public class MainActivity extends ActionBarActivity implements SampleListFragmen
                 break;
             case "Async Task":
                 startActivity(DownloadActivity.class);
+                break;
+            case "Navigation Drawer":
+                startActivity(navigation.class);
                 break;
         }
     }

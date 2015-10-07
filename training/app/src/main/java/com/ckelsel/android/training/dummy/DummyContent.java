@@ -42,6 +42,7 @@ public class DummyContent {
         addItem(new DummyItem("1", "Dynamic Fragment"));
         addItem(new DummyItem("2", "Static Fragment"));
         addItem(new DummyItem("3", "Async Task"));
+        addItem(new DummyItem("4", "Navigation Drawer"));
     }
 
     private static void addItem(DummyItem item) {
