@@ -32,6 +32,10 @@
             android:name=".Navigation.navigation"
             android:label="@string/title_activity_navigation" >
         </activity>
+        <activity
+            android:name=".FragmentAdapter.FragmentAdapterActivity"
+            android:label="@string/title_activity_fragment_adapter" >
+        </activity>
     </application>
 
 </manifest>
