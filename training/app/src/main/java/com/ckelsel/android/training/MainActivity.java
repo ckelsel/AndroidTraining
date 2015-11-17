@@ -24,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewConfiguration;
 
+import com.ckelsel.android.training.FragmentSample.fragmenthosttab.FragmentTabHostActivity;
 import com.ckelsel.android.training.Navigation.navigation;
 import com.ckelsel.android.training.AsyncTask.DownloadActivity;
 import com.ckelsel.android.training.FragmentSample.dynamic.NewsActivity;
@@ -93,11 +94,7 @@ public class MainActivity extends ActionBarActivity implements SampleListFragmen
                 Log.i("", "action_settings");
                 return true;
                 //break;
-            case R.id.action_search:
-                Log.i("", "action_search");
 
-                return true;
-                //break;
             default:
                 break;
         }
@@ -127,6 +124,9 @@ public class MainActivity extends ActionBarActivity implements SampleListFragmen
                 break;
             case "Navigation Drawer":
                 startActivity(navigation.class);
+                break;
+            case "FragmentTabHost":
+                startActivity(FragmentTabHostActivity.class);
                 break;
         }
     }

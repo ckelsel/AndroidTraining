@@ -36,6 +36,10 @@
             android:name=".FragmentAdapter.FragmentAdapterActivity"
             android:label="@string/title_activity_fragment_adapter" >
         </activity>
+        <activity
+            android:name=".FragmentSample.fragmenthosttab.FragmentTabHostActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
     </application>
 
 </manifest>
