@@ -1,1 +1,1 @@
-include ':app', ':owncloud'
+include ':app', ':owncloud', ':owncloud-android-library'

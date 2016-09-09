@@ -28,8 +28,8 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
 
-import com.owncloud.android.authentication.PassCodeManager;
-import com.owncloud.android.datamodel.ThumbnailsCacheManager;
+//import com.owncloud.android.authentication.PassCodeManager;
+//import com.owncloud.android.datamodel.ThumbnailsCacheManager;
 import com.owncloud.android.lib.common.OwnCloudClientManagerFactory;
 import com.owncloud.android.lib.common.OwnCloudClientManagerFactory.Policy;
 import com.owncloud.android.lib.common.utils.Log_OC;
@@ -73,7 +73,7 @@ public class MainApp extends Application {
         }
 
         // initialise thumbnails cache on background thread
-        new ThumbnailsCacheManager.InitDiskCacheTask().execute();
+        //new ThumbnailsCacheManager.InitDiskCacheTask().execute();
         
         if (BuildConfig.DEBUG) {
 
@@ -85,7 +85,7 @@ public class MainApp extends Application {
             Log_OC.startLogging(Environment.getExternalStorageDirectory().getAbsolutePath());
             Log_OC.d("Debug", "start logging");
         }
-
+/*
         // register global protection with pass code
         registerActivityLifecycleCallbacks( new ActivityLifecycleCallbacks() {
 
@@ -126,7 +126,7 @@ public class MainApp extends Application {
             public void onActivityDestroyed(Activity activity) {
                 Log_OC.d(activity.getClass().getSimpleName(), "onDestroy() ending" );
             }
-        });
+        });*/
     }
 
     public static Context getAppContext() {
