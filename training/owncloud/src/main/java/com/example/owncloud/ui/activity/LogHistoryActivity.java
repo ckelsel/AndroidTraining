@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.owncloud.R;
 import com.example.owncloud.ui.dialog.LoadingDialog;
+import com.example.owncloud.ui.dialog.Notification;
 
 import java.lang.ref.WeakReference;
 
@@ -29,6 +30,7 @@ public class LogHistoryActivity extends AppCompatActivity {
 
         TextView logTV = (TextView) findViewById(R.id.logTV);
 
+        new Notification().demo(getApplicationContext());
 
         if (savedInstanceState == null) {
             LoadingLogTask task = new LoadingLogTask(logTV);
@@ -37,6 +39,8 @@ public class LogHistoryActivity extends AppCompatActivity {
             mLogText = savedInstanceState.getString(KEY_LOG_TEXT);
             logTV.setText(mLogText);
         }
+
+
     }
 
     private class LoadingLogTask extends AsyncTask <String, Void, String> {
