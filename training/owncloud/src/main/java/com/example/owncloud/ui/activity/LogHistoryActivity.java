@@ -1,11 +1,11 @@
 package com.example.owncloud.ui.activity;
 
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.TextView;
 
 import com.example.owncloud.R;
@@ -16,6 +16,12 @@ import java.lang.ref.WeakReference;
 public class LogHistoryActivity extends AppCompatActivity {
     private static final String DIALOG_WAIT_TAG = "DIALOG_WAIT";
 
+    private static final String KEY_LOG_TEXT = "LOG_TEXT";
+
+    private static final String TAG = LogHistoryActivity.class.getSimpleName();
+
+    private String mLogText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +30,13 @@ public class LogHistoryActivity extends AppCompatActivity {
         TextView logTV = (TextView) findViewById(R.id.logTV);
 
 
-        new LoadingLogTask(logTV).execute();
-
+        if (savedInstanceState == null) {
+            LoadingLogTask task = new LoadingLogTask(logTV);
+            task.execute();
+        } else {
+            mLogText = savedInstanceState.getString(KEY_LOG_TEXT);
+            logTV.setText(mLogText);
+        }
     }
 
     private class LoadingLogTask extends AsyncTask <String, Void, String> {
@@ -37,12 +48,12 @@ public class LogHistoryActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            showLoadingDialog();
+            dismissLoadingDialog();
         }
 
         @Override
         protected void onPreExecute() {
-            dismissLoadingDialog();
+            showLoadingDialog();
         }
 
         protected String doInBackground(String... args) {
