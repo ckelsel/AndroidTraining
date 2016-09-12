@@ -26,7 +26,9 @@ public class Notification {
 
     NotificationCompat.Builder mBuilder;
     NotificationManager mNotifyManager;
-    public void demo(final Context context) {
+    int showIncreId = 1;
+    int showProgressId = 2;
+    public void showIncre(final Context context) {
         mNotifyManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
         mBuilder = create(context);
         mBuilder.setContentTitle("Picture Download")
@@ -37,12 +39,11 @@ public class Notification {
                     @Override
                     public void run() {
 
-                        int id = 1;
+
                         int incr;
                         for (incr = 0; incr <= 100; incr += 5) {
                             mBuilder.setProgress(100, incr, false);
-
-                            show(context, id, mBuilder);
+                            show(context, showIncreId, mBuilder);
 
                             try {
                                 Thread.sleep(3000);
@@ -52,9 +53,38 @@ public class Notification {
                         }
                         mBuilder.setContentText("Download complete")
                                 .setProgress(0, 0, false);
-                        show(context, id, mBuilder);
+                        show(context, showIncreId, mBuilder);
                     }
                 }
         ).start();
+    }
+
+    public void showProgress(final Context context) {
+        mNotifyManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
+        mBuilder = create(context);
+        mBuilder.setContentTitle("Picture Download")
+                .setContentText("Download in progress");
+
+        mBuilder.setProgress(0, 0, true);
+        show(context, showProgressId, mBuilder);
+        new Thread(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        int incr;
+                        for (incr = 0; incr <= 100; incr += 5) {
+                            try {
+                                Thread.sleep(3000);
+                            } catch (InterruptedException e) {
+
+                            }
+                        }
+                        mBuilder.setProgress(0, 0, false);
+                        show(context, showProgressId, mBuilder);
+                    }
+                }
+        ).start();
+
+
     }
 }

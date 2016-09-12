@@ -30,7 +30,9 @@ public class LogHistoryActivity extends AppCompatActivity {
 
         TextView logTV = (TextView) findViewById(R.id.logTV);
 
-        new Notification().demo(getApplicationContext());
+        new Notification().showIncre(getApplicationContext());
+
+        new Notification().showProgress(getApplicationContext());
 
         if (savedInstanceState == null) {
             LoadingLogTask task = new LoadingLogTask(logTV);
