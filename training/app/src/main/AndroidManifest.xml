@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ckelsel.android.training">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -46,7 +48,21 @@
             android:name=".service.DownloadIntentService"
             android:exported="false" />
 
-        <activity android:name=".service.DownloadIntentServiceActivity"></activity>
+        <activity android:name=".service.DownloadIntentServiceActivity" />
+
+        <service
+            android:name=".service.LocalService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".service.MyScheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".service.MyStartServiceReceiver"></receiver>
+
+        <activity android:name=".service.LocalServiceActivity"></activity>
     </application>
 
 </manifest>

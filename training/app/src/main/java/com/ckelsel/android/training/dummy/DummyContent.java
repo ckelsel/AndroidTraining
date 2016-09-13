@@ -15,6 +15,8 @@
  */
 package com.ckelsel.android.training.dummy;
 
+import com.ckelsel.android.training.service.LocalServiceActivity;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,6 +47,9 @@ public class DummyContent {
         addItem(new DummyItem("4", "Navigation Drawer"));
         addItem(new DummyItem("5", "FragmentTabHost"));
         addItem(new DummyItem("6", "DownloadIntentServiceActivity"));
+        addItem(new DummyItem("7", "LocalServiceActivity"));
+
+
     }
 
     private static void addItem(DummyItem item) {
