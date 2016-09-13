@@ -44,6 +44,7 @@ public class DummyContent {
         addItem(new DummyItem("3", "Async Task"));
         addItem(new DummyItem("4", "Navigation Drawer"));
         addItem(new DummyItem("5", "FragmentTabHost"));
+        addItem(new DummyItem("6", "DownloadIntentServiceActivity"));
     }
 
     private static void addItem(DummyItem item) {

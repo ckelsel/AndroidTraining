@@ -30,6 +30,7 @@ import com.ckelsel.android.training.AsyncTask.DownloadActivity;
 import com.ckelsel.android.training.FragmentSample.dynamic.NewsActivity;
 import com.ckelsel.android.training.FragmentSample.statics.StaticFragmentTitle;
 import com.ckelsel.android.training.dummy.DummyContent;
+import com.ckelsel.android.training.service.DownloadIntentServiceActivity;
 
 import java.lang.reflect.Field;
 
@@ -128,6 +129,10 @@ public class MainActivity extends ActionBarActivity implements SampleListFragmen
             case "FragmentTabHost":
                 startActivity(FragmentTabHostActivity.class);
                 break;
+            case "DownloadIntentServiceActivity":
+                startActivity(DownloadIntentServiceActivity.class);
+                break;
+
         }
     }
 }
