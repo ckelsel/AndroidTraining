@@ -24,18 +24,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewConfiguration;
 
+import com.ckelsel.android.training.Drag.MoveImgActivity;
 import com.ckelsel.android.training.FragmentSample.fragmenthosttab.FragmentTabHostActivity;
 import com.ckelsel.android.training.Navigation.navigation;
 import com.ckelsel.android.training.AsyncTask.DownloadActivity;
 import com.ckelsel.android.training.FragmentSample.dynamic.NewsActivity;
 import com.ckelsel.android.training.FragmentSample.statics.StaticFragmentTitle;
-import com.ckelsel.android.training.dummy.DummyContent;
 import com.ckelsel.android.training.service.DownloadIntentServiceActivity;
 import com.ckelsel.android.training.service.LocalServiceActivity;
 
 import java.lang.reflect.Field;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
@@ -136,6 +135,10 @@ public class MainActivity extends ActionBarActivity implements SampleListFragmen
             case "LocalServiceActivity":
                 startActivity(LocalServiceActivity.class);
                 break;
+            case "MoveImgActivity":
+                startActivity(MoveImgActivity.class);
+                break;
+
         }
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ckelsel.android.training.dummy;
+package com.ckelsel.android.training;
 
 import com.ckelsel.android.training.service.LocalServiceActivity;
 
@@ -48,7 +48,7 @@ public class DummyContent {
         addItem(new DummyItem("5", "FragmentTabHost"));
         addItem(new DummyItem("6", "DownloadIntentServiceActivity"));
         addItem(new DummyItem("7", "LocalServiceActivity"));
-
+        addItem(new DummyItem("8", "MoveImgActivity"));
 
     }
 

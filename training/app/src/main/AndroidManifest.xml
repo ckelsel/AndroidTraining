@@ -57,12 +57,13 @@
 
         <receiver android:name=".service.MyScheduleReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".service.MyStartServiceReceiver"></receiver>
+        <receiver android:name=".service.MyStartServiceReceiver" />
 
-        <activity android:name=".service.LocalServiceActivity"></activity>
+        <activity android:name=".service.LocalServiceActivity" />
+        <activity android:name=".Drag.MoveImgActivity"></activity>
     </application>
 
 </manifest>

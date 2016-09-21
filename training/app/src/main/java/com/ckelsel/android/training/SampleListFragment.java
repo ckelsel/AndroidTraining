@@ -24,9 +24,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-
-import com.ckelsel.android.training.dummy.DummyContent;
-
 /**
  * A fragment representing a list of Items.
  * <p>
